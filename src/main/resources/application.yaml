@@ -14,3 +14,7 @@ spring:
 
     flyway:
       enable: true
+
+movieflix:
+  security:
+    secret: "movieflix-hashcode"
