@@ -1,4 +1,10 @@
 package com.movieflix.movieflix.user.request;
 
-public record LoginRequest(String email, String password) {
+import io.swagger.v3.oas.annotations.media.Schema;
+
+public record LoginRequest(
+        @Schema(type = "string", description = "Email do usuário")
+        String email,
+        @Schema(type = "string", description = "Senha do usuário")
+        String password) {
 }

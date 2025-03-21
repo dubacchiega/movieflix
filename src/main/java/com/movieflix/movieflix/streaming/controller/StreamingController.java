@@ -4,6 +4,7 @@ import com.movieflix.movieflix.category.entity.Category;
 import com.movieflix.movieflix.category.mapper.CategoryMapper;
 import com.movieflix.movieflix.category.request.CategoryRequest;
 import com.movieflix.movieflix.category.response.CategoryResponse;
+import com.movieflix.movieflix.documentation.StreamingControllerDoc;
 import com.movieflix.movieflix.streaming.entity.Streaming;
 import com.movieflix.movieflix.streaming.mapper.StreamingMapper;
 import com.movieflix.movieflix.streaming.request.StreamingRequest;
@@ -20,7 +21,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/movieflix/streaming")
 @RequiredArgsConstructor
-public class StreamingController {
+public class StreamingController implements StreamingControllerDoc {
 
     private final StreamingService streamingService;
 

@@ -5,6 +5,7 @@ import com.movieflix.movieflix.category.mapper.CategoryMapper;
 import com.movieflix.movieflix.category.request.CategoryRequest;
 import com.movieflix.movieflix.category.response.CategoryResponse;
 import com.movieflix.movieflix.category.service.CategoryService;
+import com.movieflix.movieflix.documentation.CategoryControllerDoc;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,7 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/movieflix/category")
 @RequiredArgsConstructor // serve como injeção de dependencias
-public class CategoryController {
+public class CategoryController implements CategoryControllerDoc {
 
 //    @Autowired
     private final CategoryService categoryService;

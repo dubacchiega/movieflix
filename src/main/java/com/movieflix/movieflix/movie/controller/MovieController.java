@@ -1,10 +1,18 @@
 package com.movieflix.movieflix.movie.controller;
 
+import com.movieflix.movieflix.documentation.MovieControllerDoc;
 import com.movieflix.movieflix.movie.entity.Movie;
 import com.movieflix.movieflix.movie.mapper.MovieMapper;
 import com.movieflix.movieflix.movie.request.MovieRequest;
 import com.movieflix.movieflix.movie.response.MovieResponse;
 import com.movieflix.movieflix.movie.service.MovieService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,7 +25,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/movieflix/movie")
 @RequiredArgsConstructor
-public class MovieController {
+public class MovieController implements MovieControllerDoc {
 
     private final MovieService movieService;
 
