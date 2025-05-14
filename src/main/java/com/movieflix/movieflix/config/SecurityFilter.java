@@ -34,6 +34,8 @@ public class SecurityFilter extends OncePerRequestFilter {
                 // colocando o objeto inteiro, isso me permite pegar o usuário autenticado em qualquer lugar da aplicação. Tendo acesso ao id, nome e email
                 UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(jwtUserData, null, null);
                 SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+                // eu posso usar o SecurityContextHolder.getContext().getAuthentication().getPrincipal(); -> fazendo isso, eu recupero o usuario logado;
+
             }
             filterChain.doFilter(request, response); // continua a cadeia de filtros. Necessario para continuar a execução da requisição.
         }else {
